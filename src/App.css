@@ -1,38 +1,283 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Aparajita';
+  src: url('fonts/aparaj.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.SnackbarItem-variantSuccess-20 {
+  background-color: #212529 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  font-family: 'Aparajita';
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: lowercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #FFF;
+  background-image: url('assets/bg.jpg');
+}
+
+.row-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logotipo {
+  width: 230px;
+}
+
+.title-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.spotify {
+  width: 65px;
+  height: auto;
+}
+
+.row-video-container {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.video {
+  width: 550px;
+}
+
+.intro {
+  line-height: 1;
+}
+
+.intro span {
+  font-size: 26px;
+}
+
+.explanation {
+  margin-top: 110px;
+}
+
+.explanation div {
+  margin: 0 180px;
+  padding: 20px;
+  line-height: 1;
+}
+
+.explanation div span {
+  font-size: 26px;
+}
+
+.gif1-container {
+  z-index: 0;
+}
+
+.gif1 {
+  width: 300px;
+}
+
+.what {
+  font-size: 60px;
+}
+
+.list {
+  list-style: none;
+  line-height: 1;
+  margin: 10px 100px 0px 70px;
+}
+
+.list li {
+  margin-top: 50px;
+  font-size: 26px;
+}
+
+.sub-list {
+  list-style: none;
+  margin: 10px 0 0px 100px;
+}
+
+.sub-list li {
+  margin-top: 20px;
+}
+
+.last {
+  margin-top: 20px;
+}
+
+.form {
+  margin: 30px 100px 0 120px;
+}
+
+.form div {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.form div span {
+  font-size: 36px;
+}
+
+.form div input {
+  width: 100%;
+  height: 24px;
+  padding-top: 3px;
+  background: transparent;
+  margin-left: 5px;
+  border: none;
+  border-bottom: 3px solid #212529;
+}
+
+.form div input:focus {
+  outline-offset: none;
+  outline: none;
+}
+
+.button-submit {
+  background-color: transparent;
+  border: none;
+}
+
+.text-button {
+  font-size: 60px;
+  letter-spacing: 1px;
+  color: rgb(43, 43, 43);
+}
+
+.footer-div {
+  margin-top: 30px;
+  padding: 0 150px;
+  line-height: 1;
+}
+
+.gif-2 {
+  width: 240px;
+  margin: 30px 0 0 0;
+}
+
+.list-item {
+  /* white-space: nowrap; */
+  line-height: 1;
+  border: 3px solid #212529;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.list-item p {
+  color: #2f343ae7;
+  margin-left: 6px;
+}
+
+@media (max-width: 992px) {
+  .explanation div {
+    margin: 0 10px;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .list {
+    list-style: none;
+    line-height: 1;
+    margin: 10px 20px 0px 20px;
   }
+
+  .sub-list {
+    list-style: none;
+    margin: 10px 0 0px 40px;
+  }
+
+  .form {
+    margin: 30px 0 0 20px;
+  }
+
+  .form div {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+  }
+
+  .form div span {
+    font-size: 36px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .what {
+    font-size: 30px;
+  }
+
+  .list {
+    list-style: none;
+    line-height: 1;
+    margin: 10px 0 0px 0;
+  }
+
+  .sub-list {
+    margin: 10px 0 0 0;
+  }
+
+  .form {
+    margin: 30px 0 0 0;
+  }
+
+  .form div {
+    display: grid;
+  }
+
+  .form div span {
+    font-size: 26px;
+  }
+
+  .form div input {
+    height: 35px;
+  }
+
+  .text-button {
+    font-size: 40px;
+  }
+
+  .footer {
+    display: grid;
+  }
+
+  .footer-div {
+    /* margin-top: 30px; */
+    padding: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .explanation div {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.trash {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #212529;
+  cursor: pointer;
+}
+
+.trash:hover {
+  color: #323333c9;
 }

@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { SnackbarProvider } from "notistack";
+import "./App.css";
 
-function App() {
+import audio from "./assets/audio.mp3";
+
+import Routes from "./routes";
+
+export default () => {
+  useEffect(() => {
+    onPlayAudio();
+  }, []);
+
+  function onPlayAudio() {
+    new Audio(audio).autoplay = true;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SnackbarProvider
+      maxSnack={2}
+      autoHideDuration={2000}
+      dense={false}
+      preventDuplicate={true}
+      anchorOrigin={{ vertical: "center", horizontal: "center" }}
+    >
+      <Routes />
+    </SnackbarProvider>
   );
-}
-
-export default App;
+};
