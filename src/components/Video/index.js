@@ -6,12 +6,9 @@ export default () => {
   return (
     <div className="row row-video-container">
       <section className="col-md-6">
-        <video
-          className="img-fluid video"
-          controls="controls"
-          autoPlay="autoplay"
-          src={video}
-        />
+        <video className="img-fluid video" controls autoPlay>
+          <source src={video} type="video/mp4"></source>
+        </video>
       </section>
       <section className="col-md-6 mt-3 mt-md-0">
         <div className="intro">

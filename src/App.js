@@ -1,20 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { SnackbarProvider } from "notistack";
 import "./App.css";
 
-import audio from "./assets/audio.mp3";
-
 import Routes from "./routes";
 
+import audio from "./assets/audio.mp3";
+new Audio(audio).autoplay = true;
+
 export default () => {
-  useEffect(() => {
-    onPlayAudio();
-  }, []);
-
-  function onPlayAudio() {
-    new Audio(audio).autoplay = true;
-  }
-
   return (
     <SnackbarProvider
       maxSnack={2}
